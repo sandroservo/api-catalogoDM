@@ -1,7 +1,14 @@
 import fastify from 'fastify'
+//import cors from '@fastify/cors'
 import axios from 'axios';
 
 const app = fastify();
+
+app.register(require('fastify-cors'), {
+  origin:'*',
+  methods:['GET'],
+  
+})
 
 
 // Chave de segurança obtida no menu "Vendas" >> "Loja virtual"
