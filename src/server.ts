@@ -1,10 +1,10 @@
 import fastify from 'fastify'
-//import cors from '@fastify/cors'
+import cors from '@fastify/cors'
 import axios from 'axios';
 
 const app = fastify();
 
-app.register(require('fastify-cors'), {
+app.register(cors, {
   origin:'*',
   methods:['GET'],
   
